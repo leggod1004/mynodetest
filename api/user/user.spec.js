@@ -6,7 +6,7 @@ const app = require('../../app_express');
 describe('GET /users', () => {
 	it('should return 200 status code', (done) => {
 		request(app)
-			.get('/users')
+			.get('/')
 			.expect(200)
 			.end((err, res) => {
 				if(err) throw err;
@@ -16,7 +16,7 @@ describe('GET /users', () => {
 
 	it('should return array', (done) => {
 		request(app)
-			.get('/users')
+			.get('/')
 			.expect(200)
 			.end((err, res) => {
 				if(err) throw err;

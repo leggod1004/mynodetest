@@ -7,12 +7,12 @@ router.use(bodyParser.urlencoded({ extended: true }));
 
 const controller = require('./user.controller.js');
 
-router.get('/users', controller.index);
+router.get('/', controller.index);
 
-router.get('/users/:id', controller.show);
+router.get('/:id', controller.show);
 
-router.delete('/users/:id', controller.destroy);
+router.delete('/:id', controller.destroy);
 
-router.post('/users', controller.create);
+router.post('/', controller.create);
 
 module.exports = router;
